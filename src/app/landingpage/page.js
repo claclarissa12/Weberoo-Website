@@ -263,34 +263,45 @@ export default function Landing() {
                     ))}
                 </div>
 
-                <div className="mt-12 bg-white rounded-xl shadow p-6 max-w-4xl mx-auto">
-                    <p className="text-lg font-semibold text-[#112D4E] mb-2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div className="mt-12 bg-[#a8c1df] rounded-xl shadow p-6 max-w-4xl mx-auto ">
+                    <p className="text-lg font-bold font-mono text-[#112D4E] mb-4 ">
                         Masih ragu bikin website?
                     </p>
-                    <p className="text-xl font-bold text-[#3F72AF] mb-4">
+                    <p className=" text-black mb-2">
                         Miliki Website Impian, Bisnis Makin Cuan!
                     </p>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-black mb-6">
                         Saatnya tampil beda! Buat website menawan untuk bisnismu dan buka
                         peluang baru di era digital
                     </p>
-                    <button className="bg-[#3F72AF] text-white px-6 py-3 rounded-lg hover:bg-[#2c5480]">
+
+
+                    <button className="bg-[#3F72AF] text-black px-6 py-3 rounded-lg hover:bg-[#2c5480]">
                         Pesan Sekarang
                     </button>
                 </div>
             </div>
 
-            {/* Footer */}
-            <footer className="bg-[#0b2239] text-gray-300 text-center py-6 text-sm">
-                © 2025 Weberoo. All Rights Reserved.
-            </footer>
-
             {/* Footer Baru */}
             <footer className="bg-[#0b2239] text-gray-300 px-6 md:px-16 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-sm">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10  max-w-6xl g  mx-auto text-sm">
                     {/* Kolom 1 */}
                     <div>
-                        <h3 className="font-semibold mb-4 border-b border-gray-500 inline-block pb-1">
+                        <h3 className="font-semibold mb-5 border-b border-gray-500 inline-block pb-1">
                             Informasi umum
                         </h3>
                         <ul className="space-y-2">
@@ -304,7 +315,7 @@ export default function Landing() {
 
                     {/* Kolom 2 */}
                     <div>
-                        <h3 className="font-semibold mb-4 border-b border-gray-500 inline-block pb-1">
+                        <h3 className="font-semibold mb-5 border-b border-gray-500 inline-block pb-1">
                             Bantuan
                         </h3>
                         <ul className="space-y-2">
@@ -318,7 +329,7 @@ export default function Landing() {
 
                     {/* Kolom 3 */}
                     <div>
-                        <h3 className="font-semibold mb-4 border-b border-gray-500 inline-block pb-1">
+                        <h3 className="font-semibold mb-5 border-b border-gray-500 inline-block pb-1 ">
                             Pembuatan web site
                         </h3>
                         <ul className="space-y-2">
@@ -329,37 +340,31 @@ export default function Landing() {
                             <li><a href="#" className="hover:text-white">Website Profesional</a></li>
                         </ul>
                     </div>
+                    
                 </div>
 
                 {/* Ikuti Kami */}
-                <div className="text-center mt-10">
-                    <p className="mb-4 font-semibold">Ikuti Kami</p>
-                    <div className="flex justify-center gap-4">
-                        <a href="#" className="bg-gray-100 text-[#0b2239] p-2 rounded-full hover:bg-white transition">
-                            <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" className="bg-gray-100 text-[#0b2239] p-2 rounded-full hover:bg-white transition">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" className="bg-gray-100 text-[#0b2239] p-2 rounded-full hover:bg-white transition">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" className="bg-gray-100 text-[#0b2239] p-2 rounded-full hover:bg-white transition">
-                            <i className="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                <div className="flex justify-center gap-4 py-5">
+                    <a href="#" className="bg-gray-100 p-2 rounded-full hover:bg-white transition">
+                        <img src="/facebook.png" alt="Facebook" className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="bg-gray-200 p-2 rounded-full hover:bg-white transition">
+                        <img src="/twitter.png" alt="Twitter" className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="bg-gray-100 p-2 rounded-full hover:bg-white transition">
+                        <img src="/instagram.png" alt="Instagram" className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="bg-gray-200 p-2 rounded-full hover:bg-white transition">
+                        <img src="/linkedin.png" alt="LinkedIn" className="w-5 h-5" />
+                    </a>
                 </div>
 
+
                 {/* Copy Right */}
-                <div className="text-center text-xs text-gray-400 mt-10 border-t border-gray-600 pt-4">
+                <div className="text-center text-xs text-gray-400 mt-10 border-t border-gray-600 pt-4 px-7">
                     © 2025 Weberoo. All Rights Reserved.
                 </div>
             </footer>
-
-
         </div>
-
-
-
     );
 }
