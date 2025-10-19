@@ -8,6 +8,7 @@ import AdvantagesSection from './components/advantages';
 import DesignSection from './components/design';
 import PriceSection from './components/price';
 import FooterSection from './components/footer';
+import KonsultasiSection from './components/whatsapp-button';   
 
 
 export default function Landing() {
@@ -20,8 +21,8 @@ export default function Landing() {
                 transition={{ duration: 0.5 }}
                 className="fixed top-0 w-full bg-[#112D4E] shadow-lg z-50"
             >
-                <div className="flex items-center justify-between max-w-8xl mx-auto px-6 border-b">
-                    <img src="/logo.png" alt="Logo" className="w-32 mt-5" />
+                <div className="flex items-center justify-between max-w-8xl mx-auto px-6 border-b -mt-4">
+                    <img src="/logo.png" alt="Logo" className="w-32 mt-2" />
                     <ul className="flex gap-6 text-lg text-[#F9F7F7] font-semibold">
                         <li><a href="#about" className="hover:text-blue-400 transition">About</a></li>
                         <li><a href="#service" className="hover:text-blue-400 transition">Service</a></li>
@@ -39,6 +40,7 @@ export default function Landing() {
             <AdvantagesSection />
             <DesignSection />
             <PriceSection />
+            <KonsultasiSection />
             <FooterSection />
         </div>
     );

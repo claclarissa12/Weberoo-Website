@@ -1,8 +1,15 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function DesignSection() {
+  const [selectedDesign, setSelectedDesign] = useState(null);
+
   const designs = [
-    { img: "/desain1.png", link: "https://namaprojectmu.netlify.app", title: "E-Commerce" },
+    {
+      img: "/ec_clarissa.png",
+      link: "https://websiteecommercebasic.vercel.app/homepage.html",
+      title: "E-Commerce",
+    },
     { img: "/desain2.png", link: "https://portfolio-keren.vercel.app", title: "Portfolio" },
     { img: "/desain3.png", link: "https://todolist-app.vercel.app", title: "To-Do List" },
   ];
@@ -43,12 +50,10 @@ export default function DesignSection() {
         }}
       >
         {designs.map((d, i) => (
-          <motion.a
+          <motion.div
             key={i}
-            href={d.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition block"
+            onClick={() => setSelectedDesign(d)} // klik = buka modal
+            className="cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-lg transition block"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
@@ -58,7 +63,7 @@ export default function DesignSection() {
           >
             <img src={d.img} alt={d.title} className="w-full h-48 object-cover" />
             <p className="mt-2 text-[#112D4E] font-semibold">{d.title}</p>
-          </motion.a>
+          </motion.div>
         ))}
       </motion.div>
 
@@ -74,6 +79,46 @@ export default function DesignSection() {
           LIHAT SEMUA DESAIN
         </button>
       </motion.div>
+
+      {/* Modal Pop-up */}
+      <AnimatePresence>
+        {selectedDesign && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-xl shadow-xl max-w-6xl w-[100%] p-4 relative"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Tombol Tutup */}
+              <button
+                onClick={() => setSelectedDesign(null)}
+                className="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl"
+              >
+                ✕
+              </button>
+
+              {/* Judul */}
+              <h3 className="text-xl font-semibold text-[#112D4E] mb-3">
+                {selectedDesign.title}
+              </h3>
+
+              {/* Preview Iframe */}
+              <iframe
+                src={selectedDesign.link}
+                className="w-full h-[400px] rounded-lg border"
+                title={selectedDesign.title}
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
