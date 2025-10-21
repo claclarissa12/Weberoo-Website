@@ -10,7 +10,10 @@ export default function DesignSection() {
       link: "https://websiteecommercebasic.vercel.app/homepage.html",
       title: "E-Commerce",
     },
-    { img: "/desain2.png", link: "https://sabrina03112008.github.io/portofolio/", title: "Portfolio" },
+    { img: "/portofolio.png", 
+      link: "https://sabrina03112008.github.io/portofolio/", 
+      title: "Portfolio"
+    },
     { img: "/desain3.png", link: "https://todolist-app.vercel.app", title: "To-Do List" },
   ];
 
