@@ -2,7 +2,7 @@ export default function FooterSection() {
   return (
     <footer className="bg-[#0b2239] text-gray-300 px-6 md:px-16 py-12">
       {/* Grid kolom utama */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-sm">
+      <div id="contact" className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-sm">
         
         {/* Kolom 1 */}
         <div>

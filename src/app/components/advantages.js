@@ -56,7 +56,7 @@ export default function AdvantagesSection() {
           {advantages.map((a, i) => (
             <motion.div
               key={i}
-              className="flex flex-col justify-center items-start gap-5 bg-[#F9FBFF]/80 backdrop-blur-sm border border-[#4971cf] rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="flex flex-col justify-center items-start gap-5 bg-[#F9FBFF]/80 backdrop-blur-sm border border-[#4971cf] rounded-3xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.02 }}
@@ -79,10 +79,10 @@ export default function AdvantagesSection() {
 
               {/* Teks */}
               <div>
-                <h3 className="font-semibold text-lg md:text-xl text-[#0F2B5B] mb-2">
+                <h3 className="font-semibold text-md md:text-lg text-[#0F2B5B] mb-2">
                   {a.title}
                 </h3>
-                <p className="text-gray-600 text-base leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed">
                   {a.desc}
                 </p>
               </div>
