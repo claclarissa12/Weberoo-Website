@@ -6,7 +6,7 @@ export default function DesignSection() {
 
   const designs = [
     {
-      img: "/ec_clarissa.png",
+      img: "/c-clarissa.png",
       link: "https://websiteecommercebasic.vercel.app/homepage.html",
       title: "E-Commerce",
     },
