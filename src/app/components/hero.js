@@ -5,7 +5,7 @@ import { use } from 'react';
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-col md:flex-row items-center px-8 md:py-32 bg-gradient-to-b from-[#112D4E] to-[#1c3e6a]">
+    <div id="hero" className="flex flex-col md:flex-row items-center px-8 md:py-20 bg-gradient-to-b from-[#112D4E] to-[#1c3e6a]">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
