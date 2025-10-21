@@ -67,8 +67,8 @@ export default function TestimoniSection() {
 
         {/* Scroll area */}
         <div
-          ref={scrollRef}
-          className="flex overflow-x-auto gap-6 px-8 pb-4 scroll-smooth snap-x snap-mandatory scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-transparent"
+           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              className="flex overflow-x-auto gap-6 px-8 pb-4 scroll-smooth snap-x snap-mandatory"
         >
           {data.map((item, i) => (
             <div
