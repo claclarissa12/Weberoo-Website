@@ -10,8 +10,17 @@ export default function DesignSection() {
       link: "https://websiteecommercebasic.vercel.app/homepage.html",
       title: "E-Commerce",
     },
-    { img: "/desain2.png", link: "https://portfolio-keren.vercel.app", title: "Portfolio" },
-    { img: "/desain3.png", link: "https://todolist-app.vercel.app", title: "To-Do List" },
+
+    { 
+      img: "/desain2.png", 
+      link: "https://portfolio-keren.vercel.app",
+       title: "Portfolio" },
+
+    { 
+      img: "/desain3.png", 
+      link: "https://portofolio-1ltl54k7t-faridas-projects-6c2353d0.vercel.app/", 
+      title: "Portofolio" ,
+    },
   ];
 
   return (
