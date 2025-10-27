@@ -4,21 +4,38 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function DesignSection() {
   const [selectedDesign, setSelectedDesign] = useState(null);
 
+  // ✅ Total 6 item sekarang
   const designs = [
     {
       img: "/c-clarissa.png",
       link: "https://websiteecommercebasic.vercel.app/homepage.html",
       title: "E-Commerce",
     },
-
-    { img: "/portofolio.png", 
-      link: "https://sabrina03112008.github.io/portofolio/", 
-      title: "Portfolio"
+    {
+      img: "/portofolio.png",
+      link: "https://sabrina03112008.github.io/portofolio/",
+      title: "Portofolio",
+    },
+    {
+      img: "/pfarida.jpg",
+      link: "https://z4raa11.github.io/portofolio/",
+      title: "Portofolio",
     },
 
-    { img: "/pfarida.jpg", 
-      link: "https://z4raa11.github.io/portofolio/", 
-      title: "Portofolio" 
+    {
+      img: "/portofolio_sarah.png",
+      link: "https://sarahaull.github.io/portofolio/",
+      title: "Portofolio",
+    },
+    {
+      img: "/landing.png",
+      link: "https://sarahaull.github.io/project-landingpage/",
+      title: "Landing Page",
+    },
+    {
+      img: "/landingg.png",
+      link: "https://sarahaull.github.io/landingpage-bucket/",
+      title: "Business Website",
     },
   ];
 
@@ -60,8 +77,8 @@ export default function DesignSection() {
         {designs.map((d, i) => (
           <motion.div
             key={i}
-            onClick={() => setSelectedDesign(d)} // klik = buka modal
-            className="cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-lg transition block"
+            onClick={() => setSelectedDesign(d)}
+            className="cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-lg transition block bg-white"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
@@ -104,7 +121,6 @@ export default function DesignSection() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Tombol Tutup */}
               <button
                 onClick={() => setSelectedDesign(null)}
                 className="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl"
@@ -112,12 +128,10 @@ export default function DesignSection() {
                 ✕
               </button>
 
-              {/* Judul */}
               <h3 className="text-xl font-semibold text-[#112D4E] mb-3">
                 {selectedDesign.title}
               </h3>
 
-              {/* Preview Iframe */}
               <iframe
                 src={selectedDesign.link}
                 className="w-full h-[400px] rounded-lg border"
