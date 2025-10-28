@@ -44,8 +44,7 @@ export default function TestimoniSection() {
   ];
 
   return (
-    <section className="bg-[#082B4F] py-20 relative overflow-hidden">
-      {/* Judul */}
+    <section id="testimoni" className="bg-[#082B4F] py-16 relative overflow-hidden">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-white mb-2">
           Apa Kata Mereka Tentang Kami?
@@ -55,8 +54,7 @@ export default function TestimoniSection() {
         </p>
       </div>
 
-      {/* Container utama */}
-      <div className="relative w-full max-w-[1300px] mx-auto px-8">
+      <div className="relative w-full max-w-[1200px] mx-auto px-8">
         {/* Tombol kiri */}
         <button
           onClick={() => scroll("left")}
@@ -65,28 +63,26 @@ export default function TestimoniSection() {
           <ChevronLeft size={22} />
         </button>
 
-        {/* Scroll area */}
+        {/* Scroll Area */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto gap-6 px-8 pb-4 scroll-smooth snap-x snap-mandatory scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-transparent"
+          className="flex overflow-x-auto gap-4 px-6 pb-3 scroll-smooth snap-x snap-mandatory scrollbar-thin scrollbar-thumb-white/40 scrollbar-track-transparent"
         >
           {data.map((item, i) => (
             <div
               key={i}
-              className="min-w-[300px] max-w-[300px] bg-white/95 p-6 rounded-2xl shadow-[0_6px_15px_rgba(255,255,255,0.2)] snap-center flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_25px_rgba(255,255,255,0.35)]"
+              className="min-w-[250px] max-w-[250px] bg-white/95 p-5 rounded-2xl shadow-[0_6px_15px_rgba(255,255,255,0.2)] snap-center flex-shrink-0 transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_25px_rgba(255,255,255,0.35)]"
             >
-              <p className="italic text-gray-700 mb-5 leading-relaxed text-[14.5px]">
+              <p className="italic text-gray-700 mb-4 leading-relaxed text-sm">
                 “{item.teks}”
               </p>
               <div className="flex items-center gap-3">
                 <img
                   src={item.img}
                   alt={item.nama}
-                  className="w-10 h-10 rounded-full border-2 border-[#082B4F]/20 object-cover"
+                  className="w-10 h-10 rounded-full border-2 border-[#082B4F]/30 object-cover"
                 />
-                <p className="font-semibold text-gray-800 text-[15px]">
-                  {item.nama}
-                </p>
+                <p className="font-semibold text-gray-800 text-[14px]">{item.nama}</p>
               </div>
             </div>
           ))}
