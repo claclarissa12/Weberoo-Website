@@ -28,7 +28,7 @@ export default function DesignSection() {
       title: "Portofolio",
     },
     {
-      img: "/landing.png",
+      img: "/cake.png",
       link: "https://sarahaull.github.io/project-landingpage/",
       title: "Landing Page",
     },
