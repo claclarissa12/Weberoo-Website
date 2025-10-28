@@ -9,6 +9,7 @@ import DesignSection from './components/design';
 import PriceSection from './components/price';
 import FooterSection from './components/footer';
 import KonsultasiSection from './components/whatsapp-button';   
+import TestimoniSection from './components/testimoni';   
 
 
 export default function Landing() {
@@ -43,6 +44,7 @@ export default function Landing() {
             <AdvantagesSection />
             <DesignSection />
             <PriceSection />
+            <TestimoniSection />
             <KonsultasiSection />
             <FooterSection />
         </div>
