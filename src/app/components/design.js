@@ -38,6 +38,11 @@ export default function DesignSection() {
       link: "https://sarahaull.github.io/landingpage-bucket/",
       title: "Business Website",
     },
+    {
+      img: "/flowers.jpg",
+      link: "https://sarahaull.github.io/landingpage-bucket/",
+      title: "Business Website",
+    },
   ];
 
   return (
