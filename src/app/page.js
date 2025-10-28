@@ -9,7 +9,7 @@ import DesignSection from './components/design';
 import PriceSection from './components/price';
 import FooterSection from './components/footer';
 import KonsultasiSection from './components/whatsapp-button';   
-import TestimoniSection from './components/testi.js';   
+import TestimoniSection from './components/testi';   
 
 
 export default function Landing() {
